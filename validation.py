@@ -163,19 +163,19 @@ print(validate_movement_title("F minor"))   # Should print: True
 
 #validation to check that the field is not empty
 
-def validate_performer_name(performer_name):
-    """Check if performer_name is blank"""
-    if performer_name == None:
+def validate_performer_fullName(performer_fullName):
+    """Check if performer_fullName is blank"""
+    if performer_fullName == None:
         return False
-    if not performer_name:
+    if not performer_fullName:
         return False
     else:
         return True
 
 
 # Test the function
-print(validate_performer_name(""))        # Should print: False
-print(validate_performer_name("Invalid"))   # Should print: False
-print(validate_performer_name("Greg Laman"))   # Should print: True
+print(validate_performer_fullName(""))        # Should print: False
+print(validate_performer_fullName("Invalid"))   # Should print: False
+print(validate_performer_fullName("Greg Laman"))   # Should print: True
 
-#validate_performer_name() — proper format
+#validate_performer_fullName() — proper format

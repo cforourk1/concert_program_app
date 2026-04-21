@@ -31,7 +31,7 @@ piece = {
         "birth": None,
         "death": None
     },
-    "year": None,
+    "composition_year": None,
     "arranger": "",  # if applicable
     "movements": [],  # list of movement titles
     "additionalPerformers": []  # for this piece
@@ -91,7 +91,7 @@ example_program = {
                 "birth": 1895,
                 "death": 1968
             },
-            "year": 1919,
+            "composition_year": 1919,
             "arranger": None,
             "movements": [
                 {"title": "Oh! Quanto siete pallida nel viso!", "tempo": ""},
