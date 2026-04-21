@@ -10,6 +10,9 @@
 # dropdown menu later
 #performers array will hold all of the performer data a
 #as they get added to the array. same with performers #and all other data listed here.
+
+from validation import validate_recital_type
+
 recital_metadata = {
     "type": "BM",  # dropdown
     "performers": [],  # list of performer dictonaries
@@ -99,3 +102,5 @@ example_program = {
     ],
     "intermissionAfterPiece": None
 }
+
+print(example_program)
