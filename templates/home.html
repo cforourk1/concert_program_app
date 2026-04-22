@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concert Program Generator</title>
+</head>
+<body>
+    <h1>Concert Program Generator</h1>
+    <p>Fill in the form below to generate a request for a concert program to be printed</p>
+<!--Program metdata section-->
+<form action="/submit" method="POST">
+
+    <!--recital type -->
+<h3>Recital Type</h3>
+<select id="recital_type" name="recital_type">
+    <option value="">Select a recital type</option>
+    <option value="BM">Bachelor of Music</option>
+    <option value="MM">Master of Music</option>
+    <option value="DMA">Doctor of Musical Arts</option>
+    <option value="Specialist">Specialist</option>
+    <option value="Guest">Guest</option>
+    <option value="Chamber">Chamber</option>
+    <option value="Faculty">Faculty</option>
+    <option value="BFA">BFA</option>
+</select><br>
+<!-- performer information -->
+<div class="performer-group">
+    <h3>Add a performer</h3>
+    <label>Full Name:</label>
+    <input type="text" name="performer_1_fullName" placeholder="">
+<br>
+    <label>Instruments:</label>
+    <input type="text" name="performer_1_instruments" placeholder="">
+<br>
+    <button type="button">Add an additional performer</button>
+</div>
+<br>
+<!-- accompanist_fullName   -->
+ <div class="accompanist">
+    <h3>Add an accompanist</h3>
+    <label>Full Name:</label>
+    <input type="text" name="accompanist_1_fullName" placeholder="">
+<br>
+    <label>Instruments:</label>
+    <input type="text" name="accompanist_1_instruments" placeholder="">
+<br>
+    <button type="button">Add an additional accompanist</button>
+</div>
+
+<!-- recital info location-->
+
+ <div class="location">
+    <h3>Location and venue information</h3>
+<br>
+    <label>Building location:</label>
+    <input type="text" name="building" placeholder="">
+<br>
+<br>
+    <label>Venue:</label>
+    <input type="text" name="venue" placeholder="">
+<br>
+<br>
+    <label>Date and time:</label>
+    <input type="datetime-local" name="date" placeholder="">
+<br>
+    <label>If there is an intermission list what time and for how long: </label>
+    <input type="text" name="intermission" placeholder="">
+    <br>
+</div>
+
+<!-- section for pieces being performed -->
+
+<!-- Pieces Section -->
+<h2>Pieces</h2>
+
+<div class="piece-group">
+    <h3>Piece</h3>
+
+    <label>Piece title:</label>
+    <input type="text" name="piece_1_title" placeholder="">
+    <br>
+
+    <label>Composer name:</label>
+    <input type="text" name="piece_1_composer_name" placeholder="">
+    <br>
+
+    <label>Composer birth year:</label>
+    <input type="number" name="piece_1_composer_birth" placeholder="">
+    <br>
+
+    <label>Composer death year:</label>
+    <input type="number" name="piece_1_composer_death" placeholder="">
+    <br>
+
+    <label>Composition year:</label>
+    <input type="number" name="piece_1_composition_year" placeholder="">
+    <br>
+
+    <label>Arranger(optional):</label>
+    <input type="text" name="piece_1_arranger" placeholder="">
+    <br>
+
+    <h4>Movements</h4>
+    <input type="text" name="piece_1_movement_1" placeholder="">
+    <br>
+    <button type="button">Add movement</button>
+    <br>
+
+    <button type="button">Add another piece</button>
+</div>
+
+<br>
+    <button type="submit">Submit program request</button>
+</form>
+</body>
+</html>
