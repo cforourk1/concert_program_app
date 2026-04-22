@@ -99,7 +99,7 @@ def validate_time(time):
 
 # Test the function
 print(validate_time(""))        # Should print: False
-print(validate_date("Invalid"))   # Should print: False
+print(validate_time("Invalid"))   # Should print: False
 print(validate_time("4:30pm"))   # Should print: True
 
 #validation to check that the title field is not empty
@@ -179,3 +179,81 @@ print(validate_performer_fullName("Invalid"))   # Should print: False
 print(validate_performer_fullName("Greg Laman"))   # Should print: True
 
 #validate_performer_fullName() — proper format
+
+#validation to check that the field is not empty
+
+def validate_instruments(instruments):
+    """Check if instruments is blank"""
+    if instruments == None:
+        return False
+    if not instruments:
+        return False
+    else:
+        return True
+
+
+# Test the function
+print(validate_instruments([]))        # Should print: False
+print(validate_instruments(["Invalid"]))   # Should print: False
+print(validate_instruments(["bassoon"]))   # Should print: True
+
+#validate_instruments() — proper formatf
+
+#validation to check that the field is not empty
+
+def validate_composer_birth(composer_birth):
+    """Check if composer_birth is blank"""
+    if composer_birth == None:
+        return False
+    if not composer_birth:
+        return False
+    else:
+        return True
+
+
+# Test the function
+print(validate_composer_birth(""))        # Should print: False
+print(validate_composer_birth("Invalid"))   # Should print: False
+print(validate_composer_birth("1957"))   # Should print: True
+
+#validate_composer_birth() — proper format
+
+
+#validation to check that the field is not empty
+
+def validate_composer_death(composer_death):
+    """Check if composer_death is blank"""
+    if composer_death == None:
+        return False
+    if not composer_death:
+        return False
+    else:
+        return True
+
+
+# Test the function
+print(validate_composer_death(""))        # Should print: False
+print(validate_composer_death("Invalid"))   # Should print: False
+print(validate_composer_death("1966"))   # Should print: True
+
+#validate_composer_death() — proper format
+
+
+#validation to check that the field is not empty
+
+def validate_composition_year(composition_year):
+    """Check if composition_year is blank"""
+    if composition_year == None:
+        return False
+    if not composition_year:
+        return False
+    else:
+        return True
+
+
+# Test the function
+print(validate_composition_year(""))        # Should print: False
+print(validate_composition_year("Invalid"))   # Should print: False
+print(validate_composition_year("1945"))   # Should print: True
+
+#validate_composition_year() — proper format
