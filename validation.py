@@ -11,9 +11,6 @@ def validate_recital_type(recital_type):
     else:
         return False
 
-# Test the function
-print(validate_recital_type("BM"))        # Should print: True
-print(validate_recital_type("Invalid"))   # Should print: False
 
 #validation to check in accompanist is not empty
 
@@ -25,11 +22,7 @@ def validate_accompanist(accompanist_name):
             return False
         else:
            return True
-# Test the function
-print(validate_accompanist(""))        # Should print: False
-print(validate_accompanist("Invalid"))   # Should print: False
-print(validate_accompanist("Greg Laman"))   # Should print: True
-#validation to check in location is not empty
+
 
 #validate_location() — not blank (string)
 def validate_location(location):
@@ -40,13 +33,6 @@ def validate_location(location):
         return False
     else:
         return True
-
-
-# Test the function
-print(validate_location(""))        # Should print: False
-print(validate_location("Invalid"))   # Should print: False
-print(validate_location("Earl V. Moore Building"))   # Should print: True
-#validation to check in location is not empty
 
 
 #validate_venue() — not blank (string)
@@ -60,10 +46,6 @@ def validate_venue(venue):
         return True
 
 
-# Test the function
-print(validate_venue(""))        # Should print: False
-print(validate_venue("Invalid"))   # Should print: False
-print(validate_venue("Britton Recital Hall"))   # Should print: True
 
 #validation to check that the date field is not empty
 
@@ -77,14 +59,6 @@ def validate_date(date):
         return True
 
 
-# Test the function
-print(validate_date(""))        # Should print: False
-print(validate_date("Invalid"))   # Should print: False
-print(validate_date("4.30.26"))   # Should print: True
-
-#alidate_time() — proper format
-
-
 #validation to check that the time field is not empty
 
 def validate_time(time):
@@ -95,12 +69,6 @@ def validate_time(time):
         return False
     else:
         return True
-
-
-# Test the function
-print(validate_time(""))        # Should print: False
-print(validate_time("Invalid"))   # Should print: False
-print(validate_time("4:30pm"))   # Should print: True
 
 #validation to check that the title field is not empty
 
@@ -113,15 +81,7 @@ def validate_piece_title(title):
     else:
         return True
 
-
-# Test the function
-print(validate_piece_title(""))        # Should print: False
-print(validate_piece_title("Invalid"))   # Should print: False
-print(validate_piece_title("titlepiece"))   # Should print: True
-
-#validate_title formatting
-
-#validation to check that the time field is not empty
+#validation composer name
 
 def validate_composer_name(composer_name):
     """Check if composer_name is blank"""
@@ -131,15 +91,6 @@ def validate_composer_name(composer_name):
         return False
     else:
         return True
-
-
-# Test the function
-print(validate_composer_name(""))        # Should print: False
-print(validate_composer_name("Invalid"))   # Should print: False
-print(validate_composer_name("Greg Laman"))   # Should print: True
-
-#validate_composer name  — proper format
-
 
 
 #validation to check that the movement title  field is not empty
@@ -154,14 +105,7 @@ def validate_movement_title(movement_title):
         return True
 
 
-# Test the function
-print(validate_movement_title(""))        # Should print: False
-print(validate_movement_title("Invalid"))   # Should print: False
-print(validate_movement_title("F minor"))   # Should print: True
-
-#validate movement title  test end
-
-#validation to check that the field is not empty
+#validate_performer_fullName() — proper format
 
 def validate_performer_fullName(performer_fullName):
     """Check if performer_fullName is blank"""
@@ -172,15 +116,7 @@ def validate_performer_fullName(performer_fullName):
     else:
         return True
 
-
-# Test the function
-print(validate_performer_fullName(""))        # Should print: False
-print(validate_performer_fullName("Invalid"))   # Should print: False
-print(validate_performer_fullName("Greg Laman"))   # Should print: True
-
-#validate_performer_fullName() — proper format
-
-#validation to check that the field is not empty
+#validate_instruments() — proper format
 
 def validate_instruments(instruments):
     """Check if instruments is blank"""
@@ -192,14 +128,8 @@ def validate_instruments(instruments):
         return True
 
 
-# Test the function
-print(validate_instruments([]))        # Should print: False
-print(validate_instruments(["Invalid"]))   # Should print: False
-print(validate_instruments(["bassoon"]))   # Should print: True
 
-#validate_instruments() — proper formatf
-
-#validation to check that the field is not empty
+#validate_composer_birth() — proper format
 
 def validate_composer_birth(composer_birth):
     """Check if composer_birth is blank"""
@@ -211,15 +141,9 @@ def validate_composer_birth(composer_birth):
         return True
 
 
-# Test the function
-print(validate_composer_birth(""))        # Should print: False
-print(validate_composer_birth("Invalid"))   # Should print: False
-print(validate_composer_birth("1957"))   # Should print: True
-
-#validate_composer_birth() — proper format
 
 
-#validation to check that the field is not empty
+#validate_composer_death() — proper format
 
 def validate_composer_death(composer_death):
     """Check if composer_death is blank"""
@@ -230,16 +154,7 @@ def validate_composer_death(composer_death):
     else:
         return True
 
-
-# Test the function
-print(validate_composer_death(""))        # Should print: False
-print(validate_composer_death("Invalid"))   # Should print: False
-print(validate_composer_death("1966"))   # Should print: True
-
-#validate_composer_death() — proper format
-
-
-#validation to check that the field is not empty
+#validate_composition_year() — proper format
 
 def validate_composition_year(composition_year):
     """Check if composition_year is blank"""
@@ -251,9 +166,63 @@ def validate_composition_year(composition_year):
         return True
 
 
-# Test the function
-print(validate_composition_year(""))        # Should print: False
-print(validate_composition_year("Invalid"))   # Should print: False
-print(validate_composition_year("1945"))   # Should print: True
 
-#validate_composition_year() — proper format
+
+
+if __name__ == '__main__':
+
+#recital type valid
+    print(validate_recital_type("BM"))        # Should print: True
+    print(validate_recital_type("Invalid"))
+#Performer Name check
+    print(validate_performer_fullName(""))        # Should print: False
+    print(validate_performer_fullName("Invalid"))   # Should print: False
+    print(validate_performer_fullName("Greg Laman"))   # Should print: True
+#Instrument check
+    print(validate_instruments([]))        # Should print: False
+    print(validate_instruments(["Invalid"]))   # Should print: False
+    print(validate_instruments(["bassoon"]))   # Should print: True
+#movement title not empty
+    print(validate_movement_title(""))        # Should print: False
+    print(validate_movement_title("Invalid"))   # Should print: False
+    print(validate_movement_title("F minor"))   # Should print: True
+#accompanist is not empty
+    print(validate_accompanist(""))        # Should print: False
+    print(validate_accompanist("Invalid"))   # Should print: False
+    print(validate_accompanist("Greg Laman"))   # Should print: True
+#location check
+    print(validate_location(""))        # Should print: False
+    print(validate_location("Invalid"))   # Should print: False
+    print(validate_location("Earl V. Moore Building"))   # Should print: True
+#venue check
+    print(validate_venue(""))        # Should print: False
+    print(validate_venue("Invalid"))   # Should print: False
+    print(validate_venue("Britton Recital Hall"))   # Should print: True
+#date check
+    print(validate_date(""))        # Should print: False
+    print(validate_date("Invalid"))   # Should print: False
+    print(validate_date("4.30.26"))   # Should print: True
+#time check
+    print(validate_time(""))        # Should print: False
+    print(validate_time("Invalid"))   # Should print: False
+    print(validate_time("4:30pm"))   # Should print: True
+#title check
+    print(validate_piece_title(""))        # Should print: False
+    print(validate_piece_title("Invalid"))   # Should print: False
+    print(validate_piece_title("titlepiece"))   # Should print: True
+#composer check
+    print(validate_composer_name(""))        # Should print: False
+    print(validate_composer_name("Invalid"))   # Should print: False
+    print(validate_composer_name("Greg Laman"))   # Should print: True
+#composer birth
+    print(validate_composer_birth(""))        # Should print: False
+    print(validate_composer_birth("Invalid"))   # Should print: False
+    print(validate_composer_birth("1957"))   # Should print: True
+#composer death
+    print(validate_composer_death(""))        # Should print: False
+    print(validate_composer_death("Invalid"))   # Should print: False
+    print(validate_composer_death("1966"))   # Should print: True
+#composition year
+    print(validate_composition_year(""))        # Should print: False
+    print(validate_composition_year("Invalid"))   # Should print: False
+    print(validate_composition_year("1945"))   # Should print: True

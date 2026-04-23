@@ -13,14 +13,51 @@ def submit_form():
 
     # Validate each field
     errors = {}
-
+#recital type validation
     if not validate_recital_type(data.get('recital_type')):
         errors['recital_type'] = "Invalid recital type"
-
+#performer name validation
     if not validate_performer_fullName(data.get('performer_1_fullName')):
-        errors['performer_1_fullName'] = "Performer name required"
+        errors['performer_fullName'] = "Performer name required"
+#accompanist name validation
+    if not validate_accompanist(data.get('accompanist_1_fullName')):
+        errors['accompanist_fullName'] = "Invalid accompanist name"
+#location validation
+    if not validate_location(data.get('location')):
+        errors['location'] = "Invalid recital location"
+#venue
+    if not validate_venue(data.get('venue')):
+        errors['venue'] = "Invalid recital venue"
 
-    # ... continue for all fields
+#date
+    if not validate_date(data.get('date')):
+        errors['date'] = "Invalid recital date"
+
+
+#piece_1_title
+    if not validate_piece_title(data.get('piece_1_title')):
+        errors['piece_title'] = "Invalid recital piece_title"
+
+#composer_name
+    if not validate_composer_name(data.get('piece_1_composer_name')):
+        errors['composer_name'] = "Invalid recital composer_name"
+
+#composer birth
+    if not validate_composer_birth(data.get('piece_1_composer_birth')):
+        errors['composer_birth'] = "Invalid recital composer_birth"
+
+#composer death
+    if not validate_composer_death(data.get('piece_1_composer_death')):
+        errors['composer_death'] = "Invalid recital composer_death"
+#composition year
+    if not validate_composition_year(data.get('piece_1_composition_year')):
+        errors['composition_year'] = "Invalid recital composition_year"
+
+
+#movement title
+    if not validate_movement_title(data.get('piece_1_movement_1')):
+        errors['movement_title'] = "Invalid recital movement_title"
+
 
     if errors:
         return {"status": "error", "errors": errors}
