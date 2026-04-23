@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='preview.css') }}">
+    <title>Concert Program Generator</title>
+</head>
+<body>
+
+    <p class="preview-label">Program Preview — Please review before submitting</p>
+
+    <div class="program">
+
+        <p class="recital-type">{{ recital_type }} Recital</p>
+
+        <p class="performer-name">{{ performer_name }}</p>
+        <p class="performer-instruments">{{ performer_instruments }}</p>
+
+        <p class="accompanist-name">{{ accompanist_name }}</p>
+        <p class="accompanist-instruments">{{ accompanist_instruments }}</p>
+
+        <hr class="divider">
+
+        <div class="event-details">
+            <p>{{ date }}</p>
+            <p>{{ location }} &mdash; {{ venue }}</p>
+            <p>{{ time }}</p>
+        </div>
+
+        <hr class="divider">
+
+        <div class="piece">
+            <div class="piece-header">
+                <p class="piece-title">{{ title }}</p>
+                <div class="composer-info">
+                    <p class="composer-name">{{ composer_name }}</p>
+                    <p class="composer-dates">({{ composer_birth }}–{{ composer_death }})</p>
+                </div>
+            </div>
+            <p class="composition-year">({{ composition_year }})</p>
+            <div class="movements">
+                <p class="movement">{{ movements }}</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="actions">
+        <form action="/confirm" method="POST">
+            <button class="btn-confirm" type="submit">Confirm and submit</button>
+        </form>
+        <form action="/" method="GET">
+            <button class="btn-back" type="submit">Go back and edit</button>
+        </form>
+    </div>
+
+</body>
+</html>

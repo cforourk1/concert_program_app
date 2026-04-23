@@ -62,7 +62,23 @@ def submit_form():
     if errors:
         return {"status": "error", "errors": errors}
     else:
-        return {"status": "success", "message": "Form received!"}
+        return render_template('preview.html',
+    recital_type=data.get('recital_type'),
+    performer_name=data.get('performer_1_fullName'),
+    performer_instruments=data.get('performer_1_instruments'),
+    accompanist_name=data.get('accompanist_1_fullName'),
+    accompanist_instruments=data.get('accompanist_1_instruments'),
+    location=data.get('location'),
+    venue=data.get('venue'),
+    date=data.get('date'),
+    time=data.get('time'),
+    title=data.get('piece_1_title'),
+    composer_name=data.get('piece_1_composer_name'),
+    composer_birth=data.get('piece_1_composer_birth'),
+    composer_death=data.get('piece_1_composer_death'),
+    composition_year=data.get('piece_1_composition_year'),
+    movements=data.get('piece_1_movement_1'),
+)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
